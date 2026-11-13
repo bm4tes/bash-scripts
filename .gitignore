@@ -1,0 +1,4 @@
+*.saveGame
+*.bak
+*~
+.DS_Store
