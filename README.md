@@ -39,7 +39,7 @@ Modulare Hilfsfunktionen für eigene Bash-Skripte (u. a. ANSI-Farben, Array-Oper
 ## Starten
 
 ```bash
-git clone [https://github.com/bm4tes/bash-scripts.git](https://github.com/bm4tes/bash-scripts.git)
+git clone https://github.com/bm4tes/bash-scripts.git
 cd bash-scripts
 chmod +x games/*.sh
 
