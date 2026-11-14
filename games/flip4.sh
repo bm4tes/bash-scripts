@@ -449,7 +449,10 @@ arrayContains() {
 
 uniqueArray() {
     local inputArray=("${@}")
-    echo "${inputArray[@]}" | tr " " "\n" | sort | uniq
+    echo "${inputArray[@]}" |
+        tr " " "\n" |
+        sort |
+        uniq
 }
 
 gameLoop() {
@@ -602,21 +605,6 @@ else
     if [ ${#cliColors[@]} -gt 0 ]; then
         initPlayerColors "${cliColors[@]}"
     fi
-    # while getopts p:c:g:w:h:r flag; do
-    #     case "${flag}" in
-    #         p) players+=("${OPTARG}") ;;
-    #         c) playerColorListReversed="${OPTARG}\n${playerColorListReversed}" ;;
-    #         g) winningCondition="${OPTARG}" ;;
-    #         w) boardWidth="${OPTARG}" ;;
-    #         h) boardHeight="${OPTARG}" ;;
-    #         r) randomOrder="${OPTARG}" ;;
-    #     esac
-    # done
-    # playerColorList=$(echo -e ${playerColorListReversed} | tac)
-    # noOfPlayerColors=$(echo -e "${playerColorList}" | wc -l)
-    # if [ ${noOfPlayerColors} -gt 0 ]; then
-    #     initPlayerColors "${playerColorList}"
-    # fi
 fi
 
 if [[ "${randomOrder}" != "false" ]]; then
